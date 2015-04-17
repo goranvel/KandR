@@ -3,8 +3,7 @@
 void squeeze(char s1[], char s2[]);
 
 int main(void) {
-	char a[6] = "Hello";
-	char b[6] = "world";
+	char a[6] = "Hello", b[6] = "world";
 
 	squeeze(a, b);
 	printf("%s \n", a);
