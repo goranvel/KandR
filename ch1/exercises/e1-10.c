@@ -7,17 +7,18 @@
 main() {
 	char c;
 
+	/* goes throuhg input and replaces \t \b and \\ with it's symbosls */
 	while((c = getchar()) != EOF) {
-		if(c == '\t') {
+		if(c == '\t') {			/* replaces TAB with \t */
 			putchar('\\');
 			putchar('t');
-		} else if(c == '\b') {
+		} else if(c == '\b') {	/* replaces BACKSPACE with \b */
 			putchar('\\');
 			putchar('b');
-		} else if(c == '\\') {
+		} else if(c == '\\') {A /* replaces BACKSHASH with \ */
 			putchar('\\');
 			putchar('\\');
-		} else {
+		} else {						/* outputs other characters */
 			putchar(c);
 		}
 	}

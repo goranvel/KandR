@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 // prints "Hello World" on one line
-// THIS TESTS \c escape sequence
+// tests \c escape sequence
 int main(void) {
 	printf("Hello \cWord!\n");
 

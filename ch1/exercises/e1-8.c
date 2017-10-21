@@ -5,15 +5,18 @@ main() {
 	int spn = 0, nln = 0, tn = 0;;
 	char c = 0;
 
+	/* counts each white space */
 	while((c=getchar()) != EOF){
-		if( c == '\n' ) {
+		if( c == '\n' ) {				/* counts new line */
 			++nln;
-		} else if( c == '\t' ) {
+		} else if( c == '\t' ) {	/* counts tab */
 			++tn;
-		} else if( c == ' ' ){
+		} else if( c == ' ' ) {		/* counts spaces */
 			++spn;
 		}
 	}
+	
+	/* prints count of each white space */
 	printf("      | count\n");
 	printf("------+------\n");
 	printf("Space | %4d\n", spn);

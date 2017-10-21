@@ -2,18 +2,22 @@
 
 #define MAXLINE 1000
 
+/* gets a single line */
 int getLine(char line[]);
-void removeTrailingBlanks(char line[], int len);
+/* removes trailing blank spaces */
+int removeTrailingBlanks(char line[], int len);
 
+/* this program removes all trealing spaces */
 main() {
 	char line[MAXLINE];
 	int len = 0;	
 	while((len = getLine(line)) != -1){
-		removeTrailingBlanks(line, len);
-		printf("%s|\n", line);
+		len = removeTrailingBlanks(line, len);
+		printf("%s\n", line);
 	}
 }
 
+/* gets a single line */
 int getLine(char s[]) {
 	int i = 0;
 	for(;(s[i] = getchar()) != EOF && s[i] != '\n' && i < MAXLINE - 1; ++i);
@@ -23,8 +27,11 @@ int getLine(char s[]) {
 	return i;
 }
 
-void removeTrailingBlanks(char line[], int len) {
+/* removes trailing blanks from line */
+int removeTrailingBlanks(char line[], int len) {
 	for(;(line[--len] == ' ' || line[len] == '\t'););
 
 	line[++len] = '\0';
+
+	int len;
 }

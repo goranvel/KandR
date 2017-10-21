@@ -1,16 +1,15 @@
 #include <stdio.h>
 
-int strLen(char string[]);
+int strLen(char s[]);
 
 int main(void) {
-	char ss[10] = "abcd";
-
-	printf("%d \n", strLen(ss));
+	printf("%d \n", strLen("Hello World!!!"));
 }
 
-int strLen(char string[]) {
+/* returns lenght of s */
+int strLen(char s[]) {
 	int i;
-	i = 0;
-	while(string[++i] != '\0');
+	for(i = 0; s[i] != '\0'; ++i);
+
 	return i;
 }

@@ -9,8 +9,10 @@ main() {
 	lower =	0;		/* lower limit of temperaturee tabe */
 	upper =	300;	/* upper limit */
 	step	=	20;	/* step size */
-	printf(" Fahreneight |    Celsius\n");
-	printf("-------------+-------------\n");
+	printf(" Fahrenheight |    Celsius\n");		/* prints header text */
+	printf("-------------+-------------\n");	/* prints header break */
+	
+	/* converts fahrenheight to celsius */
 	for(fahr = lower; fahr <= upper; fahr+=step){
 		celsius = 5.0 * (fahr-32) / 9.0;
 		printf("%12.0f |%11.2f\n", fahr, celsius);

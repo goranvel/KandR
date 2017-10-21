@@ -1,9 +1,11 @@
 #include <stdio.h>
 
-/* count character in input;
-1st version */
-
-void main() {
+/** @file
+*	 @brief 
+*  count character in input;
+*	1st version 
+*/
+void cc() {
 	long nc = 0;
 
 	while(getchar() != EOF) {
@@ -12,3 +14,6 @@ void main() {
 	
 	printf("%ld\n", nc);
 }
+
+/** DOX TEST
+*/

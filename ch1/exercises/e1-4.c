@@ -9,8 +9,10 @@ main() {
 	lower =	0;		/* lower limit of temperaturee tabe */
 	upper =	300;	/* upper limit */
 	step	=	10;	/* step size */
-	printf("     Celsius | Fahrenheit\n");
-	printf("-------------+-------------\n");
+	printf("     Celsius | Fahrenheit\n");		/* prints header text */
+	printf("-------------+-------------\n");	/* prints header break */
+	
+	/* converts celsius to fahrenheit */
 	for(cel = lower; cel <= upper; cel += step){
 		fahr = (9.0/5.0) * cel + 32.0;
 		printf("%12.0f |%11.2f\n", cel, fahr);
