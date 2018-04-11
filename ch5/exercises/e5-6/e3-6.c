@@ -20,7 +20,6 @@ int main(void) {
 
 void itoa (int n, char *s, int w) {
 	int sign = n;
-	char *start = s;
 	n = (n > 0) ? -n : n;
 
 	do {
@@ -36,7 +35,7 @@ void itoa (int n, char *s, int w) {
 
 	*s = '\0';
 
-	reverse(start);
+	reverse(s);
 }
 
 int size(char *s) {
